@@ -5,6 +5,8 @@ import { useState } from "react"
 
 function App() {
 const [pacientes, setPacientes] = useState([]);
+const [paciente, setPaciente] = useState({});
+
   return (
     <div className="container mx-auto mt-20">
       <Header />
@@ -12,8 +14,16 @@ const [pacientes, setPacientes] = useState([]);
       <Formulario
         pacientes = {pacientes}
         setPacientes={setPacientes}
+        paciente={paciente}
+        setPaciente={setPaciente}
+      
       />
-      <ListadoPacientes pacientes={pacientes}/>
+      <ListadoPacientes 
+      pacientes={pacientes} 
+      setPaciente = {setPaciente}
+      
+      
+      />
       </div>
     </div>
   )
